@@ -3,7 +3,7 @@
 
 perguntas = [
     {
-        'Pergunta': 'Quanto é 2+2?',
+        'Pergunta': '44',
         'Opções': ['1', '3', '4', '5'],
         'Resposta': '4',
     },
