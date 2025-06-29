@@ -1,9 +1,13 @@
-# Relações entre classes: associação, agregação e composição
-# Associação é um tipo de relação onde os objetos
-# estão ligados dentro do sistema.
-# Essa é a relação mais comum entre objetos e tem subconjuntos
-# como agregação e composição (que veremos depois).
-# Geralmente, temos uma associação quando um objeto tem
-# um atributo que referencia outro objeto.
-# A associação não especifica como um objeto controla
-# o ciclo de vida de outro objeto.
+# Encapsulamento (modificadores de acesso: public, protected, private)
+# Python NÃO TEM modificadores de acesso
+# Mas podemos seguir as seguintes convenções
+#   (sem underline) = public
+#       pode ser usado em qualquer lugar
+# _ (um underline) = protected
+#       não DEVE ser usado fora da classe
+#       ou suas subclasses.
+# __ (dois underlines) = private
+#       "name mangling" (desfiguração de nomes) em Python
+#       _NomeClasse__nome_attr_ou_method
+#       só DEVE ser usado na classe em que foi
+#       declarado.
