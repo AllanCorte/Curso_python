@@ -1,0 +1,93 @@
+# Herança simples - Relações entre classes
+# Associação - usa, Agregação - tem
+# Composição - É dono de, Herança - É um
+#
+# Herança vs Composição
+#
+# Classe principal (Pessoa)
+#   -> super class, base class, parent class
+# Classes filhas (Cliente)
+#   -> sub class, child class, derived class
+class Pessoa:
+    cpf = '1234'
+
+    def __init__(self, nome, sobrenome):
+        self.nome = nome
+        self.sobrenome = sobrenome
+
+    def falar_nome_classe(self):
+        print('Classe PESSOA')
+        print(self.nome, self.sobrenome, self.__class__.__name__)
+
+
+class Cliente(Pessoa):
+    def falar_nome_classe(self):
+        print('EITA, nem saí da classe CLIENTE')
+        print(self.nome, self.sobrenome, self.__class__.__name__)
+
+
+class Aluno(Pessoa):
+    cpf = 'cpf aluno'
+    ...
+
+
+c1 = Cliente('Luiz', 'Otávio')
+c1.falar_nome_classe()
+a1 = Aluno('Maria', 'Helena')
+a1.falar_nome_classe()
+print(a1.cpf)
+# help(Cliente)
+
+# super() e a sobreposição de membros - Python Orientado a Objetos
+# Classe principal (A)
+#   -> super class, base class, parent class
+# Classes filhas (B, C)
+#   -> sub class, child class, derived class
+
+class A(object):
+    atributo_a = 'valor a'  # Atributo de classe de A
+
+    def __init__(self, atributo):
+        self.atributo = atributo  # Atributo de instância
+
+    def metodo(self):
+        print('A')  # Método que imprime 'A'
+
+class B(A):
+    atributo_b = 'valor b'  # Atributo de classe de B
+
+    def __init__(self, atributo, outra_coisa):
+        super().__init__(atributo)  # Chama o __init__ da classe A
+        self.outra_coisa = outra_coisa  # Novo atributo de instância
+
+    def metodo(self):
+        print('B')  # Método que imprime 'B' (sobrescreve o de A)
+
+class C(B):
+    atributo_c = 'valor c'  # Atributo de classe de C
+
+    def __init__(self, *args, **kwargs):
+        # Chama o __init__ da classe B (e, por consequência, de A)
+        super().__init__(*args, **kwargs)
+
+    def metodo(self):
+        # Chama explicitamente o método metodo das classes A e B
+        # super().metodo()  # Chamaria o método de B (MRO)
+        # super(B, self).metodo()  # Chamaria o método de A
+        # super(A, self).metodo()  # Chamaria o método de object (não faz nada)
+        A.metodo(self)  # Imprime 'A'
+        B.metodo(self)  # Imprime 'B'
+        print('C')      # Imprime 'C'
+
+# print(C.mro())  # Mostra a ordem de resolução de métodos (MRO) da classe C
+# print(B.mro())  # Mostra a MRO de B
+# print(A.mro())  # Mostra a MRO de A
+
+c = C('Atributo', 'Qualquer')  # Cria um objeto de C, passando argumentos para os __init__ das classes
+# print(c.atributo)            # Mostra o atributo herdado de A
+# print(c.outra_coisa)         # Mostra o atributo herdado de B
+c.metodo()                     # Chama o método metodo de C (imprime A, B, C)
+# print(c.atributo_a)          # Mostra o atributo de classe de A
+# print(c.atributo_b)          # Mostra o atributo de classe de B
+# print(c.atributo_c)          # Mostra o atributo de classe de C
+# c.metodo()                   # Chama novamente o método metodo de C
