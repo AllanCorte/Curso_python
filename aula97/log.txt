@@ -1,0 +1,3 @@
+Sucess: que legal (LogoFileMixin)
+error: qualquer coisaaaa (LogoFileMixin)
+Sucess: que legal (LogoFileMixin)
