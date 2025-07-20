@@ -24,7 +24,6 @@ def concatenar(string_inicial):
         return valor_final
     return interna
 
-
 c = concatenar('a')
 print(c('b'))
 print(c('c'))

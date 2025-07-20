@@ -4,7 +4,6 @@ chave = 'nome'
 pessoa[chave] = 'allan alves'
 
 
-
 pessoa['sobrenome'] = 'corte'
 print(pessoa)
 
