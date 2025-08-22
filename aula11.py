@@ -4,11 +4,12 @@
 numero_str = input('vou dobrar o nummero que digitar: ')
 
 try:
-     print(numero_str)
+    print(numero_str)
 
-     numero_float = float(numero_str)
-     print('float', numero_float )
-     print(f'o dobro do numero {numero_str} é o numero {numero_float *2}')
+    numero_float = float(numero_str)
+    print('float', numero_float)
+    print(f'o dobro do numero {numero_str} é o numero {numero_float * 2}')
+
 
 except:
     print('isso não é um numero')

@@ -35,7 +35,8 @@ Banco será responsável autenticar o cliente e as contas da seguinte maneira:
 Só será possível sacar se passar na autenticação do banco (descrita acima)
 Banco autentica por um método.
 """
-from abc import ABC , abstractmethod
+from abc import ABC, abstractmethod
+
 
 class Pessoa:
     def __init__(self, nome, idade):
@@ -58,10 +59,12 @@ class Pessoa:
     def idade(self, valor):
         self._idade = valor
 
+
 class Cliente(Pessoa):
     def __init__(self, nome, idade, conta):
         super().__init__(nome, idade)
         self.conta = conta
+
 
 class Conta(ABC):
     def __init__(self, agencia, numero_da_conta, saldo):
@@ -76,6 +79,7 @@ class Conta(ABC):
     def sacar(self, valor):
         pass
 
+
 class ContaCorrente(Conta):
     def __init__(self, agencia, numero_da_conta, saldo, limite):
         super().__init__(agencia, numero_da_conta, saldo)
@@ -87,6 +91,7 @@ class ContaCorrente(Conta):
             return True
         return False
 
+
 class ContaPoupanca(Conta):
     def __init__(self, agencia, numero_da_conta, saldo):
         super().__init__(agencia, numero_da_conta, saldo)
@@ -96,6 +101,7 @@ class ContaPoupanca(Conta):
             self.saldo -= valor
             return True
         return False
+
 
 class Banco:
     def __init__(self, agencias):
@@ -115,6 +121,7 @@ class Banco:
         ):
             return True
         return False
+
 
 # Exemplo de uso
 conta1 = ContaCorrente(348, 4365, 10, 100)

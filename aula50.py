@@ -8,7 +8,7 @@ produto = {
 }
 
 dc = {
-    chave : valor
+    chave: valor
     if isinstance(valor, (int, float))else valor.upper()
     for chave, valor
     in produto.items()

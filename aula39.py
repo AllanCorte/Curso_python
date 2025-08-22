@@ -12,18 +12,18 @@
 pessoa = {
     'nome': 'Luiz Otávio',
     'sobrenome': 'Miranda',
-    'idade': 900,
+    'idade': 910,
 }
 
 pessoa.setdefault('idade', 3)
-#print(pessoa['idade'])
-print(len(pessoa))
-print(list(pessoa.keys()))
-print(list(pessoa.values()))
-print(list(pessoa.items()))
+# print(pessoa['idade'])
+# print(len(pessoa))
+# print(list(pessoa.keys()))
+# print(list(pessoa.values()))
+# print(list(pessoa.items()))
 
 # for valor in pessoa.values():
-#     print(valor)
+#    print(valor)
 
-# for chave, valor in pessoa.items():
-#     print(chave, valor)
+for chave, valor in pessoa.items():
+    print(chave, valor)

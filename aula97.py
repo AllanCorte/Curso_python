@@ -15,7 +15,7 @@
 # @staticmethod e @method como abstratos, para isso
 # use @abstractmethod como decorator mais interno.
 
-#abstractmethod para qualquer método já decorado (@property e setter)
+# abstractmethod para qualquer método já decorado (@property e setter)
 # É possível criar @property @property.setter @classmethod
 # @staticmethod e métodos normais como abstratos, para isso
 # use @abstractmethod como decorator mais interno.
@@ -23,27 +23,34 @@
 # para palavras que podem mudar na programação.
 from abc import ABC, abstractmethod
 
+
 class AbstracFoo(ABC):
     def __init__(self, name):
         self._name = None
-        self.name =  name
+        self.name = name
 
     @property
     def name(self):
         return self._name
-        
+
     @name.setter
     @abstractmethod
-    def name(self, name):...
-        
+    def name(self, name): ...
+
+
 class Foo(AbstracFoo):
     def __init__(self, name):
         super().__init__(name)
-        #print('Sou inutil')
+        # print('Sou inutil')
 
-    @AbstracFoo.name.setter
-    def name (self, name):
+    @property
+    def name(self):
+        return self._name
+
+    @name.setter
+    def name(self, name):
         self._name = name
+
 
 foo = Foo('bar')
 print(foo.name)

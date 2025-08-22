@@ -16,12 +16,15 @@ class Cliente:
     def listar_endereco(self):
         # Lista todos os endereços do cliente
         for endereco in self.endereco:
-            print(f'o seu nome é {self.nome} e seu endereço', endereco.rua, endereco.numero)
+            print(f'o seu nome é {self.nome} e seu endereço',
+                  endereco.rua, endereco.numero)
+
 
 class Endereco:
     def __init__(self, rua, numero):
         self.rua = rua  # Nome da rua
         self.numero = numero  # Número do endereço
+
 
 # Cria um cliente chamado 'allan'
 cliente1 = Cliente('allan')

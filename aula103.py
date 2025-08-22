@@ -1,6 +1,7 @@
 # Context Manager com função - Criando e Usando gerenciadores de contexto
 from contextlib import contextmanager
 
+
 @contextmanager
 def my_open(caminho_arquivo, modo):
     try:
@@ -10,9 +11,10 @@ def my_open(caminho_arquivo, modo):
     except Exception as e:
         print('ocorreu erro', e)
     finally:
-        print ('fechando o arquivo')
+        print('fechando o arquivo')
         arquivo.close()
 
+
 with my_open('aula103.txt', 'w') as arquivo:
-    arquivo.write('allan alves\n', 123)
+    arquivo.write('allan alves\n')
     print('WITH', arquivo)

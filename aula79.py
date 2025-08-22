@@ -61,8 +61,8 @@ def adicionar(tarefa, tarefas):
     listar(tarefas)
 
 
-tarefas = []
-tarefas_refazer = []
+tarefas: list[str] = []
+tarefas_refazer: list[str] = []
 
 while True:
     print('Comandos: listar, desfazer e refazer')

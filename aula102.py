@@ -35,7 +35,6 @@ class MyOpen:
         self._arquivo.close()
 
 
-
 with MyOpen('aula104.txt', 'w') as arquivo:
     arquivo.write('allan alves\n')
     print('WITH', arquivo)

@@ -1,4 +1,4 @@
-#def função
+# def função
 
 def saudacao(nome):
     print(f'oi senhor {nome}, boa tarde')
@@ -16,7 +16,7 @@ Refatorar: editar o seu código.
 """
 
 
-def soma(x, y, z= None):
+def soma(x, y, z=None):
     if z is not None:
         print(f'{x=} {y=} {z=}', x + y + z)
     else:

@@ -44,6 +44,7 @@ print(a1.cpf)
 # Classes filhas (B, C)
 #   -> sub class, child class, derived class
 
+
 class A(object):
     atributo_a = 'valor a'  # Atributo de classe de A
 
@@ -52,6 +53,7 @@ class A(object):
 
     def metodo(self):
         print('A')  # Método que imprime 'A'
+
 
 class B(A):
     atributo_b = 'valor b'  # Atributo de classe de B
@@ -62,6 +64,7 @@ class B(A):
 
     def metodo(self):
         print('B')  # Método que imprime 'B' (sobrescreve o de A)
+
 
 class C(B):
     atributo_c = 'valor c'  # Atributo de classe de C
@@ -83,7 +86,9 @@ class C(B):
 # print(B.mro())  # Mostra a MRO de B
 # print(A.mro())  # Mostra a MRO de A
 
-c = C('Atributo', 'Qualquer')  # Cria um objeto de C, passando argumentos para os __init__ das classes
+
+# Cria um objeto de C, passando argumentos para os __init__ das classes
+c = C('Atributo', 'Qualquer')
 # print(c.atributo)            # Mostra o atributo herdado de A
 # print(c.outra_coisa)         # Mostra o atributo herdado de B
 c.metodo()                     # Chama o método metodo de C (imprime A, B, C)

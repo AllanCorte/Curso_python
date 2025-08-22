@@ -11,8 +11,11 @@
 
 class MeuError(Exception):
     ...
+
+
 class OutroError(Exception):
     ...
+
 
 def levantar():
     exception_ = MeuError('a', 'b', 'c')
@@ -21,7 +24,7 @@ def levantar():
     raise exception_
 
 
-try:   
+try:
     levantar()
 
 except (MeuError, ZeroDivisionError) as error:

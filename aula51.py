@@ -1,11 +1,11 @@
 # isinstace - para saber se objeto é de determinado tipo
-lista = [ 
-    'a', 1, 1.1, True, [0,1,2,], (1,2),
-    {0,1}, {'nome': 'allan'},
+lista = [
+    'a', 1, 1.1, True, [0, 1, 2,], (1, 2),
+    {0, 1}, {'nome': 'allan'},
 
 ]
- 
-for item  in lista:
+
+for item in lista:
     if isinstance(item, set):
         item.add(5)
         print(item, isinstance(item, set))
@@ -19,4 +19,3 @@ for item  in lista:
     else:
         print('OUTRO')
         print(item)
-

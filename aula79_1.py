@@ -10,6 +10,7 @@
 # refazer = todo ['fazer café', 'caminhar']
 import json
 
+
 def listar(lista_tarefas):
     print()
     if not lista_tarefas:
@@ -20,9 +21,10 @@ def listar(lista_tarefas):
     for tarefa in lista_tarefas:
         print(f'\t{tarefa}')
 
+
 def desfazer(lista_tarefas, tarefas_desfeitas):
     print()
-    
+
     if not lista_tarefas:
         print('Não tem tarefas para desfazer')
         return
@@ -32,6 +34,7 @@ def desfazer(lista_tarefas, tarefas_desfeitas):
     tarefas_desfeitas.append(tarefa)
     print()
     listar(lista_tarefas)
+
 
 def refazer(lista_tarefas, tarefas_desfeitas):
     print()
@@ -45,6 +48,7 @@ def refazer(lista_tarefas, tarefas_desfeitas):
     print()
     listar(lista_tarefas)
 
+
 def adicionar(tarefa, lista_tarefas):
     print()
     tarefa = tarefa.strip()
@@ -56,6 +60,7 @@ def adicionar(tarefa, lista_tarefas):
     lista_tarefas.append(tarefa)
     print()
     listar(lista_tarefas)
+
 
 def ler(lista_tarefas, caminho_arquivo):
     try:
@@ -69,14 +74,16 @@ def ler(lista_tarefas, caminho_arquivo):
         print('Arquivo corrompido ou vazio, iniciando lista vazia.')
     return []
 
+
 def salvar(lista_tarefas, caminho_arquivo):
     with open(caminho_arquivo, 'w', encoding='utf8') as arquivo:
         json.dump(lista_tarefas, arquivo, indent=2, ensure_ascii=False)
 
+
 caminho_arquivo = 'aula79.json'
 
 lista_tarefas = ler([], caminho_arquivo)
-tarefas_desfeitas = []
+tarefas_desfeitas: list[str] = []
 
 while True:
     print('Comandos: desfazer, refazer, listar, sair')

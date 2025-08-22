@@ -46,7 +46,8 @@ class C(B):
 # print(B.mro())  # Mostra a MRO de B
 # print(A.mro())  # Mostra a MRO de A
 
-c = C('Atributo', 'Qualquer')  # Cria um objeto de C, passando argumentos para os __init__ das classes
+# Cria um objeto de C, passando argumentos para os __init__ das classes
+c = C('Atributo', 'Qualquer')
 # print(c.atributo)            # Mostra o atributo herdado de A
 # print(c.outra_coisa)         # Mostra o atributo herdado de B
 c.metodo()                     # Chama o método metodo de C (imprime A, B, C)

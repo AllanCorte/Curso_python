@@ -9,10 +9,11 @@ o escopo local é o escopo onde apenas nomes do mesmo local
 
 x = 122
 
+
 def escopo():
-    global x 
+    global x
     x = 12
-    
+
     def outra_função():
         global x
         x = 11
@@ -21,6 +22,7 @@ def escopo():
 
     outra_função()
     print(x)
+
 
 print(x)
 escopo()
