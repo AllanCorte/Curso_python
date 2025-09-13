@@ -5,19 +5,21 @@
 
 import pprint
 
+
 def p(v):
     pprint.pprint(v, sort_dicts=False, width=40)
 
+
 lista = []
 for numero in range(10):
-    lista.append(numero)   
+    lista.append(numero)
 #    print(lista)
 
 lista = [
-    numero * 2 
+    numero * 2
     for numero in range(11)
 ]
-#print(lista)
+# print(lista)
 
 # mapeamento de dados em list comprehension
 produtos = [
@@ -26,13 +28,13 @@ produtos = [
     {'nome': 'p2', 'preco': 30, },
 ]
 novos_produtos = [
-    {**produto, 'preco': produto['preco']* 0.05}
+    {**produto, 'preco': produto['preco'] * 0.05}
     if produto['preco'] > 20 else {**produto}
-     for produto in produtos
+    for produto in produtos
 ]
 
-print(*novos_produtos, sep= '\n')
-#p(novos_produtos)
+print(*novos_produtos, sep='\n')
+# p(novos_produtos)
 
-lista =[n for n in range(10)]
+lista = [n for n in range(10)]
 print(lista)

@@ -62,6 +62,7 @@ def log_operacao(func):
     """
     pass  # Substitua este pass pela sua implementação
 
+
 # TODO: Implemente aqui as funções do menu
 
 
@@ -115,13 +116,13 @@ def carregar_produtos_menu(loja):
 def main():
     """Função principal que executa o sistema."""
     print("=== Sistema de Gestão de Produtos ===")
-    nome_loja = input("Digite o nome da sua loja: ")
-    loja = Loja(nome_loja)
+#    nome_loja = input("Digite o nome da sua loja: ")
+#    loja = Loja(nome_loja)
 
     while True:
         try:
             exibir_menu()
-            opcao = input("\nEscolha uma opção: ").strip()
+#            opcao = input("\nEscolha uma opção: ").strip()
 
             # Implemente aqui o switch case para as opções do menu
             # Use match-case (Python 3.10+) ou if-elif

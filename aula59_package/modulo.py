@@ -1,4 +1,5 @@
-def soma_modulo (x, y):
+def soma_modulo(x, y):
     return x + y
+
 
 nome = 'allan'

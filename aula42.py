@@ -19,11 +19,14 @@ perguntas = [
     },
 ]
 
-def saudação ():
+
+def saudação():
     print('parabens voce acertou')
 
-def erro ():
+
+def erro():
     print('infelizmente voce errou')
+
 
 q_acertos = 0
 
@@ -34,7 +37,7 @@ for pergunta in perguntas:
     opcoes = pergunta['Opções']
 
     for i, opcao in enumerate(opcoes):
-        print(f'{i})', opcao)  
+        print(f'{i})', opcao)
     print()
 
     try:
@@ -42,16 +45,16 @@ for pergunta in perguntas:
         if escolha >= 0 and escolha < len(opcoes):
             if opcoes[escolha] == pergunta['Resposta']:
                 saudação()
-                q_acertos +=1 
+                q_acertos += 1
             else:
                 erro()
-        else: 
+        else:
             print('escolhe um numero dentro do intervalo')
     except ValueError:
         print('por favor somente numeros inteiros')
         continue
 
     print()
-    
+
 print(f'a quantidade de acertos foi {q_acertos}')
-print( 'de', len(perguntas), 'perguntas')
+print('de', len(perguntas), 'perguntas')
