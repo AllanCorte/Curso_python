@@ -8,7 +8,6 @@ class Connection:
         self.user = None
         self.password = None
 
-
     def set_user(self, user):
         self.user = user
 
@@ -21,6 +20,7 @@ class Connection:
         connection.user = user
         connection.password = password
         return connection
+
 
 c1 = Connection()
 c1.set_user('luiz')

@@ -3,8 +3,7 @@
 # ao invés de receber a instância no primeiro
 # parâmetro, receberemos a própria classe.
 class Pessoa:
-    ano = 2023 #atributo de classe
-
+    ano = 2023  # atributo de classe
 
     def __init__(self, nome, idade):
         self.nome = nome
@@ -16,8 +15,7 @@ class Pessoa:
 
     @classmethod
     def criar_com_50_anos(cls, nome):
-        return cls (nome, 50)
-
+        return cls(nome, 50)
 
 
 p1 = Pessoa('joao', 22)

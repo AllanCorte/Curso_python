@@ -8,15 +8,15 @@
 #  🐍🤓🤯🤯🤯🤯
 class Caneta:
     def __init__(self, cor):
-        #private protected
+        # private protected
         self._cor = cor
         self._cor_tampa = None
-    
+
     @property
     def cor(self):
         print('estou no getter')
         return self._cor
-    
+
     @cor.setter
     def cor(self, valor):
         print('estou no setter')
@@ -25,7 +25,7 @@ class Caneta:
     @property
     def cor_tampa(self):
         return self._cor_tampa
-    
+
     @cor_tampa.setter
     def cor_tampa(self, valor):
         print('cor da tampa')

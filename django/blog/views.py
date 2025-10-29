@@ -10,4 +10,4 @@ def blog(request):
 
 def exemplo(request):
     print('exemplo')
-    return HttpResponse('exemplo do app 1')
+    return HttpResponse('ola seja bem-vindo')

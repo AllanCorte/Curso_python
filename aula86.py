@@ -12,22 +12,23 @@
 # - p/ executar ações ao obter um atributo
 # Código cliente - é o código que usa seu código
 class Caneta:
-    def __init__(self,cor):
+    def __init__(self, cor):
         self.cor_tinta = cor
 
     def get_cor(self):
         print('GET COR')
         return self.cor_tinta
-    
-    #no pyhton posso fazer  ele se comporta como atributo
+
+    # no pyhton posso fazer  ele se comporta como atributo
     @property
-    def cor (self):
+    def cor(self):
         print('allan')
         return self.cor_tinta
-    
+
     @property
     def cor_tampa(self):
         return 1234556
+
 
 #####################################
 caneta = Caneta('azul')
